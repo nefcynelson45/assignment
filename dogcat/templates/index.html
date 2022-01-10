@@ -1,0 +1,50 @@
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .button {
+          background-color: #ffff00;
+          border: none;
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+    }
+    .button1 {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 10%;
+    }
+    .button2 {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        border-radius: 10%;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+</head>
+<body bgcolor="#b3d1ff">
+<center>
+    <br><br>
+    <h1>Cat Or Dog ?</h1>
+    <label>Choose One :</label><br><br>
+    <form action="/task" method="get">
+        <input type="submit" class="button button2" value="Cat" name="cat" >
+        <input type="submit" class="button button1" value="Dog" name="dog" >
+    </form>
+    <br><br>
+    <img src="{% static 'images/quest.png' %}"  alt="Girl in a jacket" width="400" height="300" >
+</center>
+
+</body>
+</html>
+
+{% endblock %}
